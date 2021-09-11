@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta content="telephone=no" name="format-detection">
+    <link href="css/style.min.css" rel="stylesheet">
+<!--    <link rel="stylesheet" href="scss/css/digital-clock.css">-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+<div class="wrapper">
+    <main class="page">
+        <section class="intro">
+            <h2 class="title_big">MA<span class="f_pexel">S</span>K<span class="f_pexel">S</span>NFT</h2>
+            <div class="intro__wrapper">
+                <div class="buttons" data-da=".intro__main, 768, 1">
+                    <button class="button buttons_button"><img src="img/intro/button-1.webp" width="50" height="50"
+                                                              alt="button"></button>
+                    <button class="button buttons_button active"><img src="img/intro/button-2.webp" width="50"
+                                                                      height="50" alt="button"></button>
+                    <button class="button buttons_button"><img src="img/intro/button-3.webp" width="50" height="50"
+                                                               alt="button"></button>
+                    <button class="button buttons_button"><img src="img/intro/button-4.webp" width="30" height="30"
+                                                               alt="button"></button>
+                </div>
+                <div class="intro__container _container">
+                    <div class="intro__main">
+                        <div class="mask__img"><img src="img/intro/mask.webp" width="500" height="745" alt="mask"></div>
+                        <div class="intro__content">
+                            <div class="intro__text">
+                                <p class="text__pretitle pretitle text-sm">@cameron</p>
+                                <h1 class="text__title title">Sometimes <br/>
+                                    Typhoons Come</h1>
+                                <div class="text__bottom">
+                                    <div class="likes"><i class="fas fa-heart"></i> 37</div>
+                                    <a href="#" class="intro__link text-sm linkBtn">More info <i
+                                            class="fas fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                            <a href="#popup_form" class="intro__button button _popup-link">Place a Bid</a>
+                            <div class="intro__info">
+                                <div class="bid">
+                                    <p class="minimum text-sm">Minimum bid</p>
+                                    <h2 class="bid__bid title-sm">10.23 ETH</h2>
+                                    <p class="bid__bottom text-sm">$720</p>
+                                </div>
+                                <div class="clocks">
+                                    <div class="clocks__title text-sm">Auction ending in</div>
+                                    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+                                    <div class="time__info">
+                                        <p class="time_item text-sm hours">Hours</p>
+                                        <p class="time_item text-sm minutes">Minutes</p>
+                                        <p class="time_item text-sm seconds">Seconds</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__bottom">
+                <div class="buttons__wrapper" data-da=".intro__container, 768, first">
+                    <p class="logo">MSSFT</p>
+                    <div class="bottom__buttons bottom__buttons_l">
+                        <button class="button button_active text__inter">Masks</button>
+                        <button class="button text__inter">Video</button>
+                    </div>
+                    <div class="plus">
+                        +
+                    </div>
+                </div>
+                <div class="bottom__buttons bottom__buttons_r">
+                    <button class="button text__inter button_active">Connect Wallet</button>
+                    <button class="button button_l_l text__inter">Add Mask</button>
+                </div>
+            </div>
+            <div id="popup__bg"></div>
+            <div class="popup popup_form" id="popup_form">
+                <div class="popup__body">
+
+                    <div class="popup__content">
+                        <div class="popup__header">
+                            <h3 class="popup__title form_toHide">Get in with</h3><a href="#" class="popup__close close__popup"><i
+                                class="fal fa-times"></i></a></div>
+                        <div class="screen__first"><a href="#" class="popup__text form__text text">Terms of Service and
+                            our Privacy Policy.</a>
+                            <div class="heroes">
+                                <div class="hero dapper">
+                                    <div class="hero__img">
+                                        <img src="img/heroes/dapper.webp" width="47" height="46" alt="dapper">
+                                    </div>
+                                    <div class="hero__description">
+                                        <div class="hero__name">Dapper</div>
+                                        <div class="hero__point">Place for Fun</div>
+                                    </div>
+                                </div>
+                                <div class="hero blocto">
+                                    <div class="hero__img">
+                                        <img src="img/heroes/blocto.webp" width="27" height="38" alt="blocto">
+                                    </div>
+                                    <div class="hero__description">
+                                        <div class="hero__name">Blocto</div>
+                                        <div class="hero__point">Place for Fun</div>
+                                    </div>
+                                </div>
+                                <div class="hero ledger">
+                                    <div class="hero__img">
+                                        <img src="img/heroes/ledger.webp" width="36" height="36" alt="ledger">
+                                    </div>
+                                    <div class="hero__description">
+                                        <div class="hero__name">Ledger</div>
+                                        <div class="hero__point">Place for Fun</div>
+                                    </div>
+                                </div>
+                                <div class="hero metamask">
+                                    <div class="hero__img">
+                                        <img src="img/heroes/metamask.webp" width="38" height="40" alt="metamask">
+                                    </div>
+                                    <div class="hero__description">
+                                        <div class="hero__name">Metamask</div>
+                                        <div class="hero__point">Place for Fun</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <a href="#" class="popup__button button"
+                               onclick="hide('.screen__first'); show('.screen__second')">Place a Bid</a>
+                            <a href="#" class="popup__link linkBtn">Not enough funds</a>
+
+                        </div>
+                        <div class="screen__second">
+                            <div class="currency">
+                                <div class="currency__item dollars">$374</div>
+                                <div class="currency__item crypto"><img src="img/icons/ethereum.svg" width="20"
+                                                                        height="32" alt="ethereum icon">ETH
+                                </div>
+                                <div class="currency__item exchange">0.384894</div>
+                            </div>
+                            <div class="second__text text__inter">
+                                Must be at least 23 ETH
+                            </div>
+                            <div class="rates">
+                                <div class="rates__list">
+                                    <h3 class="rates__title">All Rate</h3>
+                                    <div class="rates__item">
+                                        <h3 class="rate__point">Your Dollar Balans</h3>
+                                        <p class="rate__value">$876.23</p>
+                                    </div>
+                                    <div class="rates__item">
+                                        <h3 class="rate__point">Your ETH Balans</h3>
+                                        <p class="rate__value">23</p>
+                                    </div>
+                                    <div class="rates__item">
+                                        <h3 class="rate__point">Service fee</h3>
+                                        <p class="rate__value">%5 - $18</p>
+                                    </div>
+                                    <div class="rates__item">
+                                        <h3 class="rate__point">Go to Creator</h3>
+                                        <p class="rate__value">%10 - $349</p>
+                                    </div>
+                                    <div class="rates__item">
+                                        <h3 class="rate__point">You Pay</h3>
+                                        <p class="rate__value">$400</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="popup__button button"
+                               onclick="hide('.screen__second'); show('.screen__third')">Place a Bid</a>
+                            <a href="#" class="popup__link linkBtn">Not enough funds</a>
+                        </div>
+                        <div class="screen__third">
+                            <div class="third__text">By connecting your wallet, you agree to our</div>
+                            <a href="#" class="popup__text form__text text">Terms of Service and our Privacy Policy.</a>
+                            <div class="third__buttons">
+                                <button class="button third__button" onclick="this.classList.add('button__clicked')">
+                                    <div class="button__icon"><img src="img/icons/gmail.svg" width="22" height="17" alt="gmail">
+                                    </div>
+                                    <p class="button__text">Sing in with G-mail</p></button>
+                                <button class="button third__button" onclick="this.classList.add('button__clicked')">
+                                    <div class="button__icon"><img src="img/icons/fb.svg" width="30" height="30" alt="fb">
+                                    </div>
+                                    <p class="button__text">Sing in with Facebook</p></button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div> <!-- popup form -->
+            </div> <!-- popups -->
+        </section> <!-- intro -->
+    </main>
+</div>
+
+
+<script src="js/libs/smoothScroll.js"></script>
+<script src="js/app.js"></script>
+<script src="js/digital_clock.js"></script>
+<script src="js/dynamicAdapt.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
